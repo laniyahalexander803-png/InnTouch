@@ -1,1 +1,33 @@
-<h1>Welcome to InnTouch</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnTouch - Hotel Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>InnTouch</h1>
+        <p>Book your perfect stay seamlessly</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h2>Find a Room</h2>
+            <form id="booking-form">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" required>
+                
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" required>
+                
+                <label for="guests">Guests:</label>
+                <input type="number" id="guests" min="1" max="10" value="1" required>
+                
+                <button type="submit">Search Availability</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
