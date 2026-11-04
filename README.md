@@ -4,7 +4,7 @@
 InnTouch is a web application designed to allow users to search for available hotel rooms based on stay dates and number of guests.
 
 ## Author
-* **Name:** Laniya Alexander
+* **Name:** Laniyah Alexander
 
 ## Technologies Used
 * HTML5
