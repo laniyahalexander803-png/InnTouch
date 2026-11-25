@@ -89,5 +89,45 @@ function displayReservationSummary(room, searchData) {
         <p><strong>Number of Nights:</strong> ${nights}</p>
         <p><strong>Nightly Rate:</strong> $${room.price}</p>
         <p><strong>Total Cost:</strong> $${totalCost.toFixed(2)}</p>
+        <button type="button" id="confirm-booking">
+    Confirm Reservation
+</button>
+
+<div id="booking-confirmation"></div>
     `;
+
+  const confirmButton = document.getElementById('confirm-booking');
+
+confirmButton.addEventListener('click', function() {
+
+    const booking = createBooking(
+        room,
+        searchData,
+        nights,
+        totalCost
+    );
+
+    const confirmationDiv = document.getElementById(
+        'booking-confirmation'
+    );
+
+    if (!booking) {
+        confirmationDiv.textContent = 'Unable to confirm reservation.';
+        return;
+    }
+
+    confirmationDiv.innerHTML = `
+        <h3 style="color: green;">Booking Confirmed!</h3>
+        <p><strong>Reservation ID:</strong> ${booking.reservationId}</p>
+        <p><strong>Room:</strong> ${booking.room}</p>
+        <p><strong>Check-in:</strong> ${booking.checkin}</p>
+        <p><strong>Check-out:</strong> ${booking.checkout}</p>
+        <p><strong>Guests:</strong> ${booking.guests}</p>
+        <p><strong>Total Cost:</strong> $${booking.totalCost.toFixed(2)}</p>
+        <p><strong>Status:</strong> ${booking.status}</p>
+    `;
+
+    confirmButton.disabled = true;
+    confirmButton.textContent = 'Reservation Confirmed';
+});  
 }
