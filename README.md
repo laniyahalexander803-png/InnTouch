@@ -55,3 +55,18 @@ InnTouch is a web application designed to allow users to search for available ho
 
 ### Additional Known Limitations
 * Saved searches are stored locally in the user's browser and are not shared across devices.
+## Sprint 2 - Room Selection and Reservation Summary
+
+* Users can select a room from the available search results.
+* The reservation summary displays the selected room, dates,
+  guest count, number of nights, nightly rate, and total cost.
+* The total cost is automatically calculated based on the
+  nightly rate and number of nights.
+* Performing a new search clears the previous reservation summary.
+
+### Additional Automated Tests
+
+* Verify the correct number of nights.
+* Verify the correct total reservation cost.
+* Reject invalid reservation dates.
+* Reject invalid room prices and reservation durations.
