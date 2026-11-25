@@ -70,3 +70,37 @@ InnTouch is a web application designed to allow users to search for available ho
 * Verify the correct total reservation cost.
 * Reject invalid reservation dates.
 * Reject invalid room prices and reservation durations.
+## Sprint 2 - Booking Confirmation
+
+* Users can confirm their selected hotel room.
+* A unique reservation ID is generated for each booking.
+* The booking confirmation displays the room, dates,
+  guest count, total cost, and reservation status.
+* The confirmation button is disabled after a successful
+  booking to prevent accidental duplicate confirmation
+  of the current selection.
+
+### Booking Service Tests
+
+* Verify successful booking creation.
+* Verify reservation ID generation.
+* Verify different bookings receive different IDs.
+* Reject bookings without a selected room.
+* Reject bookings with missing search information.
+* Reject invalid reservation durations and costs.
+
+### Known Limitations
+
+* Reservations are simulated and are not connected to
+  a real hotel booking system.
+* Completed reservations are not permanently saved.
+* Users cannot currently modify or cancel reservations.
+* Guest contact information and payment processing
+  are not implemented.
+
+## Future Development - Sprint 3
+
+* Save completed reservations.
+* Add guest contact information.
+* Allow users to view their reservations.
+* Allow users to modify or cancel reservations.
