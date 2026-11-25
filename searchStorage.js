@@ -17,3 +17,6 @@ class SearchStorage {
         return savedSearch ? JSON.parse(savedSearch) : null;
     }
 }
+if (typeof module !== 'undefined') {
+    module.exports = SearchStorage;
+}

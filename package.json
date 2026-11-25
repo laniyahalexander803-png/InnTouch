@@ -1,0 +1,24 @@
+{
+  "name": "inntouch",
+  "version": "1.0.0",
+  "description": "InnTouch is a web application designed to allow users to search for available hotel rooms based on stay dates and number of guests.",
+  "main": "script.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laniyahalexander803-png/InnTouch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/laniyahalexander803-png/InnTouch/issues"
+  },
+  "homepage": "https://github.com/laniyahalexander803-png/InnTouch#readme",
+  "devDependencies": {
+    "vitest": "^5.1.1"
+  }
+}

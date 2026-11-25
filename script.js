@@ -13,15 +13,18 @@ document.getElementById('booking-form').addEventListener('submit', function(e) {
     resultsDiv.innerHTML = '';
     errorDiv.innerHTML = '';
 
-    if (checkout <= checkin) {
-        errorDiv.textContent = 'Error: Check-out date must be after check-in date.';
-        return;
-    }
-searchStorage.saveSearch({
+    const searchData = {
     checkin: document.getElementById('checkin').value,
     checkout: document.getElementById('checkout').value,
     guests: guests
-});
+};
+
+const validationError = saveValidSearch(searchData, searchStorage);
+
+if (validationError) {
+    errorDiv.textContent = validationError;
+    return;
+}
     const rooms = [
         { name: 'Deluxe Ocean View', price: '$150/night', maxGuests: 2 },
         { name: 'Executive Suite', price: '$250/night', maxGuests: 4 },
